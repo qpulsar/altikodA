@@ -1,13 +1,22 @@
 from tkinter import *
 
+
 def topla():
     s3.set(str(int(s1.get()) + int(s2.get())))
+
+
 def cikar():
     s3.set(str(int(s1.get()) - int(s2.get())))
+
+
 def carp():
     s3.set(str(int(s1.get()) * int(s2.get())))
+
+
 def bol():
     s3.set(str(int(s1.get()) / int(s2.get())))
+
+
 root = Tk()
 root.title("Hesap Makinesi")
 root.geometry("300x300+1200+50")
