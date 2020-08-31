@@ -6,9 +6,10 @@ def topla():
     try:
         s1 = int(sayi1.get())
         s2 = int(sayi2.get())
-        hesap.set(s1 + s2)
+        hesap.set("{} + {} = {} ".format(s1, s2, s1 + s2))
     except:
         print("sayı dönüşümünde hata.")
+        hesap.set("Hatalı işlem yürütüldü.")
 
 
 root = Tk()
