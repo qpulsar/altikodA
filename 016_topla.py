@@ -6,9 +6,10 @@ def topla():
     try:
         s1 = int(sayi1.get())
         s2 = int(sayi2.get())
-        sonuc["text"] = s1+s2
+        hesap.set(s1 + s2)
     except:
         print("sayı dönüşümünde hata.")
+
 
 root = Tk()
 root.title("İki sayıyı topla")
@@ -22,7 +23,8 @@ sayi2.pack()
 but = Button(text="+", command=topla)
 but.pack()
 
-sonuc = Label(text="")
+hesap = StringVar()
+sonuc = Label(text="", textvariable=hesap)
 sonuc.pack()
 
 root.mainloop()
