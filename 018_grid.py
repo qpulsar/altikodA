@@ -5,11 +5,18 @@ from ttkthemes import ThemedTk
 
 
 def sayiekle(dugme):
+    if giris.get()=="Hatalı işlem!":
+        giris.set("")
+
     giris.set(giris.get() + str(dugme))
 
 
 def hesapla():
-    pass
+    try:
+        sonuc = eval(giris.get())
+        giris.set(sonuc)
+    except:
+        giris.set("Hatalı işlem!")
 
 root = ThemedTk(theme="arc")
 root.title("Gelişmiş Hesap Makinesi")
