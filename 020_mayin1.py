@@ -21,9 +21,10 @@ ust.pack(side=TOP, fill=X)
 alt = Frame(root, bg="red")
 alt.pack(side=TOP, fill=BOTH)
 
+res_bos = PhotoImage(file="./img/bos.png")
 for satir in range(0,10):
     for sutun in range(0,10):
-        label = Label(alt, text=".", relief=SUNKEN)
+        label = Label(alt, image=res_bos, relief=SUNKEN)
         label.grid(row=satir, column=sutun)
 
 root.mainloop()
